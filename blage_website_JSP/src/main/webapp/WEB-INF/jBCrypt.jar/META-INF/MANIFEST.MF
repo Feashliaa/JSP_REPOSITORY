@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1607322181665
+Build-Jdk: 11.0.9
+Built-By: sven.kubiak
+Bundle-Description: A Java implementation of OpenBSD's Blowfish passwo
+ rd hashing code http://www.mindrot.org/projects/jBCrypt
+Bundle-License: http://www.mindrot.org/files/jBCrypt/LICENSE
+Bundle-ManifestVersion: 2
+Bundle-Name: jBCrypt
+Bundle-SymbolicName: de.svenkubiak.jBCrypt
+Bundle-Version: 0.4.3
+Created-By: Apache Maven Bundle Plugin
+Export-Package: org.mindrot.jbcrypt;version="0.4.3"
+Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.8))"
+Tool: Bnd-4.1.0.201810181252
+

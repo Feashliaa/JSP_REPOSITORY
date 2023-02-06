@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<div id="background-container"></div>
+
+<!-- Link to app.js-->
+<script src="app.js" type="text/javascript" async></script>
+
+<head>
+    <!-- Link to style.css -->
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <title>Blage's Emporium - Signup Page</title>
+    <link rel="icon" type="image/png" href="blage_icon.png"/>
+</head>
+
+<div id="alert" class="noselect">Account Created! - Logging in!</div>
+
+<body>
+<div class="login-container">
+    <form id="login-form">
+        <h2 style="text-align: center; font-size: larger;">Signup For Blage's Helicopter Service's</h2>
+        <div class="copter-container">
+            <!-- link to blage_copter.png -->
+            <img src="blage_copter.png" alt="Blage's Copter" class="copter">
+        </div>
+        <hr class="welcome-line">
+        <label id="label_alert" style="color: red; display: none">Username Already Taken</label>
+        <label class="username_label" for="username">Username:</label>
+        <input type="text" id="username" name="username">
+        <br>
+        <label class="password_label" for="password">Password:</label>
+        <input type="password" id="password" name="password">
+        <br><br>
+        <input type="button" id="submitButton" value="Create Account" onclick="createAccount()" disabled>
+    </form>
+</div>
+</body>
+
+<script>
+    let submitButton = document.getElementById("submitButton");
+    let usernameInput = document.getElementById("username");
+    let passwordInput = document.getElementById("password");
+
+    usernameInput.addEventListener("input", function () {
+        if (usernameInput.value.length > 0 && passwordInput.value.length > 0) {
+            submitButton.disabled = false;
+        } else {
+            submitButton.disabled = true;
+        }
+    });
+
+    passwordInput.addEventListener("input", function () {
+        if (usernameInput.value.length > 0 && passwordInput.value.length > 0) {
+            submitButton.disabled = false;
+        } else {
+            submitButton.disabled = true;
+        }
+    });
+
+
+</script>
+
+</html>

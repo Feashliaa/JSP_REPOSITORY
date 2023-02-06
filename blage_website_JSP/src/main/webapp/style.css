@@ -1,0 +1,232 @@
+.login-container {
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 500px;
+    height: 1200px;
+    min-width: 275px;
+    min-height: 500px;
+
+    /* make the text look better */
+    font-family: sans-serif;
+
+    /* center the container */
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+form {
+    border: 1px solid #ccc;
+    padding: 20px;
+    /* no overflow */
+    overflow: hidden;
+
+    /* round the corners */
+    border-radius: 5%;
+
+    /* give it a background color */
+    background-color: #fff;
+
+    display: grid;
+    place-items: center;
+
+    filter: brightness(0.95);
+
+    /* give it a shadow */
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+
+}
+
+form:hover {
+    /* make it swell when hovered over */
+    transform: scale(1.025);
+    transition: 0.3s ease-in-out;
+}
+
+form:not(:hover) {
+    transform: scale(1);
+    transition: 0.3s ease-in-out;
+}
+
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+
+    /* make text not selectable */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.password_label {
+    margin-top: 12.5px;
+
+    /* center the text */
+    text-align: center;
+}
+
+.username_label {
+    /* center the text */
+    text-align: center;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 90%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+input[type="button"] {
+    width: 90%;
+    background-color: #4c7faf;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+
+    padding: 14px 20px;
+    margin-top: 24px;
+}
+
+input[type="button"]:hover {
+    background-color: #68a9e6;
+    color: black;
+}
+
+.copter-container {
+    overflow: hidden;
+    overflow-y: hidden;
+    overflow-x: hidden;
+
+    /* give it some space on the bottom */
+    margin-bottom: 40px;
+}
+
+.welcome-line {
+    /* have it take the full width of the container */
+    width: 100%;
+
+    /* make it thicker */
+    height: 3px;
+
+    /* fill it with a color */
+    background-color: #4c7faf;
+
+    /* round it */
+    border-radius: 10px;
+}
+
+html {
+    height: 100%;
+
+    /* make nothing selectable */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#background-container {
+    background-color: #e6e6e6;
+    background-image: url("blage_taking_off.gif");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    /* have it take up the full page */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+
+    filter: brightness(1);
+}
+
+#gif-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+    /* set an image as the background */
+    background-image: url("kekw.gif");
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#gif-container::-webkit-scrollbar {
+    width: 0.2em;
+    background-color: #F5F5F5;
+}
+
+#gif-container::-webkit-scrollbar-thumb {
+    background-color: #000000;
+}
+
+#alert {
+    color: white;
+    display: none;
+    /* set the background color to a transparent light grey */
+    background-color: rgba(0, 0, 0, 1);
+
+    /* have this element take up the full page */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+
+    /* have the text be in the middle of the page */
+    text-align: center;
+    padding-top: 20%;
+
+    /* set the font size */
+    font-size: 5em;
+}
+
+.noselect {
+    user-select: none;
+}
+
+/* at 500px, the container will be 100% of the width */
+@media screen and (max-width: 500px) {
+    .login-container {
+        width: 100%;
+    }
+}
+
+#amsoil_button {
+    width: 90%;
+    background-color: #4c7faf;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+
+    padding: 14px 20px;
+    margin-top: 24px;
+}
+
+#amsoil_button:hover {
+    background-color: #68a9e6;
+    color: black;
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link type="text/css" src="style.css">
+    <title>Welcome Screen</title>
+    <link rel="icon" type="image/png" href="blage_icon.png"/>
+</head>
+
+<h1>Welcome!</h1>
+<p>You have successfully logged in.</p>
+
+<div id="gif-container"></div>
+<script>
+    function printGif() {
+        // get the size of the screen
+        let screenWidth = window.innerWidth;
+        let screenHeight = window.innerHeight;
+
+        console.log(screenWidth);
+        console.log(screenHeight);
+
+        // set the gif container to the size of the screen
+        document.getElementById("gif-container").style.width = screenWidth + "px";
+        document.getElementById("gif-container").style.height = screenHeight + "px";
+
+        document.getElementById("gif-container").innerHTML = "";
+
+        // set the gif to the size of the screen
+        let gif = document.createElement("img");
+        gif.src = "kekw.gif";
+        gif.style.width = screenWidth + "px";
+        gif.style.height = screenHeight + "px";
+        document.getElementById("gif-container").appendChild(gif);
+    }
+
+    window.onload = function () {
+        printGif();
+        window.addEventListener("resize", printGif);
+    }
+</script>
+
+
+</html>

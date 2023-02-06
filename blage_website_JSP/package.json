@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "bcryptjs": "^2.4.3",
+    "sjcl": "^1.0.8"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.20.12"
+  }
+}
